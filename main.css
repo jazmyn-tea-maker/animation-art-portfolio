@@ -1,5 +1,5 @@
 html {
-    overflow: hidden;
+    overflow: scroll;
 }
 
 #container {
@@ -12,7 +12,7 @@ html {
 
 #meAndCatDiv {
     top: -2%;
-    left: -2%;
+    left: -3%;
     height: 101vh;
     width: 30vw;
     position: relative;
@@ -40,7 +40,7 @@ html {
 }
 
 #panelDiv {
-    background-color: rgb(146, 228, 200);
+    /* background-color: rgb(146, 228, 200); */
     width: 65vw;
     height: 67vh;
     position: relative;
@@ -58,4 +58,165 @@ html {
     height: 43%;
     width: 44%;
     align-self: center;
+}
+
+/* Phone */
+@media (max-aspect-ratio: 78/100) {
+    body {
+        background-color: rgb(206, 176, 255);
+    }
+    #container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        height: fit-content;
+        overflow-y: scroll;
+        row-gap: 2vh;
+    }
+    #meAndCatDiv {
+        display: none;
+    }
+    #nameTitle {
+        background-color: rgb(107, 179, 155);
+        width: 81vw;
+        height: 17vh;
+        position: relative;
+        margin: auto;
+        right: auto;
+    }
+    #qualiList {
+        background-color: rgb(159, 212, 195);
+        width: 53vw;
+        height: 15vh;
+        position: relative;
+        margin: auto;
+        right: auto;
+        left: auto;
+        top: auto;
+    }
+    #panelDiv {
+        /* background-color: rgb(146, 228, 200); */
+        width: 91vw;
+        height: auto;
+        position: relative;
+        margin: auto;
+        display: flex;
+        flex-flow: wrap column;
+        justify-content: space-evenly;
+    }
+    #panelDiv > div {
+        background-color: rgb(115, 182, 157);
+        margin: 2%;
+        height: 30vh;
+        width: 82vw;
+        align-self: center;
+    }
+    
+}
+
+/* Weird Squish phase before Phone */
+@media (min-aspect-ratio: 78/100) {
+    body {
+        background-color: rgb(148, 255, 154);
+    }
+    #nameTitle {    
+        background-color: rgb(107, 179, 155);
+        width: 47%;
+        height: 16%;
+        position: absolute;
+        margin: auto;
+        right: 12vw;
+    }
+    #qualiList {
+        background-color: rgb(159, 212, 195);
+        width: 37%;
+        height: 12%;
+        position: absolute;
+        margin: auto;
+        right: 17vw;
+        top: 18vh;
+    }
+}
+
+/* Web, normal aspect */
+@media (min-aspect-ratio: 91.2/100) {
+    body {
+        background-color: rgb(241, 141, 224);
+    }
+    html {
+        overflow: hidden;
+    }
+    
+    #container {
+        display: grid;
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    #meAndCatDiv {
+        top: -2%;
+        left: -3%;
+        height: 101vh;
+        width: 30vw;
+        position: relative;
+        display: block;
+        background-color: rgb(146, 228, 200);
+    }
+    
+    #qualiList {
+        background-color: rgb(159, 212, 195);
+        width: 21%;
+        height: 23%;
+        position: absolute;
+        margin: auto;
+        right: 45vw;
+        top: 2vh;
+    }
+    
+    #nameTitle {
+        background-color: rgb(107, 179, 155);
+        width: 40%;
+        height: 23%;
+        position: absolute;
+        margin: auto;
+        right: 3vw;
+    }
+    
+    #panelDiv {
+        /* background-color: rgb(146, 228, 200); */
+        width: 65vw;
+        height: 67vh;
+        position: relative;
+        margin: auto;
+        margin-left: 2vw;
+        margin-bottom: 5vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    #panelDiv > div {
+        background-color: rgb(115, 182, 157);
+        margin: 2%;
+        height: 43%;
+        width: 44%;
+        align-self: center;
+    }
+}
+    
+/* Web, large aspect */
+@media (min-aspect-ratio: 149.7/100) {
+    body {
+        background-color: rgb(229, 248, 160);
+    }
+    #container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin: auto;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
 }
