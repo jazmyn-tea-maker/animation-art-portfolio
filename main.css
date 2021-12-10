@@ -1,5 +1,61 @@
-#mainDiv {
+html {
+    overflow: hidden;
+}
+
+#container {
+    display: grid;
     height: 100vh;
+    width: 100vw;
+    position: relative;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#meAndCatDiv {
+    top: -2%;
+    left: -2%;
+    height: 101vh;
     width: 30vw;
-    background-color: aquamarine;
+    position: relative;
+    display: block;
+    background-color: rgb(146, 228, 200);
+}
+
+#qualiList {
+    background-color: rgb(159, 212, 195);
+    width: 21%;
+    height: 23%;
+    position: absolute;
+    margin: auto;
+    right: 45vw;
+    top: 2vh;
+}
+
+#nameTitle {
+    background-color: rgb(107, 179, 155);
+    width: 40%;
+    height: 23%;
+    position: absolute;
+    margin: auto;
+    right: 3vw;
+}
+
+#panelDiv {
+    background-color: rgb(146, 228, 200);
+    width: 65vw;
+    height: 67vh;
+    position: relative;
+    margin: auto;
+    margin-left: 2vw;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#panelDiv > div {
+    background-color: rgb(115, 182, 157);
+    margin: 2%;
+    height: 43%;
+    width: 44%;
+    align-self: center;
 }
